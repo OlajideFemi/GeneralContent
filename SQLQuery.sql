@@ -5,31 +5,6 @@ CREATE DATABASE SQLTutorial;
 USE SQLTutorial;
 
 
--- Create the EmployeeDemographics table with EmployeelD as an identity column
--- CREATE TABLE dbo.EmployeeDemographics (
---     EmployeelD INT IDENTITY(1001, 1) PRIMARY KEY,
---     FirstName VARCHAR(50),
---     LastName VARCHAR(50),
---     Age INT,
---     Gender VARCHAR(10)
--- );
-
--- Insert data into the EmployeeDemographics table
--- INSERT INTO dbo.EmployeeDemographics (FirstName, LastName, Age, Gender)
--- VALUES
---     ('Jim', 'Halpert', 30, 'Male'),
---     ('Pam', 'Beasley', 30, 'Female'),
---     ('Dwight', 'Schrute', 29, 'Male'),
---     ('Angela', 'Martin', 31, 'Female'),
---     ('Toby', 'Flenderson', 32, 'Male'),
---     ('Michael', 'Scott', 35, 'Male'),
---     ('Meredith', 'Palmer', 32, 'Female'),
---     ('Stanley', 'Hudson', 38, 'Male'),
---     ('Kevin', 'Malone', 31, 'Male'),
---     ('Ryan', 'Holward', 26, 'Male'),
---     ('Holly', 'Flax', NULL, NULL),
---     ('Darryl', 'Philbin', NULL, 'Male');
-
 -- Create the EmployeeDemographics table
 CREATE TABLE dbo.EmployeeDemographics (
     EmployeelD INT PRIMARY KEY,
@@ -63,6 +38,31 @@ VALUES
 INSERT INTO SQLTutorial.dbo.EmployeeDemographics (EmployeeID, FirstName, LastName, Gender)
 VALUES 
     (1013, 'Darryl', 'Philbin', 'Male');
+
+-- Create the EmployeeDemographics table with EmployeelD as an identity column
+-- CREATE TABLE dbo.EmployeeDemographics (
+--     EmployeelD INT IDENTITY(1001, 1) PRIMARY KEY,
+--     FirstName VARCHAR(50),
+--     LastName VARCHAR(50),
+--     Age INT,
+--     Gender VARCHAR(10)
+-- );
+
+-- Insert data into the EmployeeDemographics table
+-- INSERT INTO dbo.EmployeeDemographics (FirstName, LastName, Age, Gender)
+-- VALUES
+--     ('Jim', 'Halpert', 30, 'Male'),
+--     ('Pam', 'Beasley', 30, 'Female'),
+--     ('Dwight', 'Schrute', 29, 'Male'),
+--     ('Angela', 'Martin', 31, 'Female'),
+--     ('Toby', 'Flenderson', 32, 'Male'),
+--     ('Michael', 'Scott', 35, 'Male'),
+--     ('Meredith', 'Palmer', 32, 'Female'),
+--     ('Stanley', 'Hudson', 38, 'Male'),
+--     ('Kevin', 'Malone', 31, 'Male'),
+--     ('Ryan', 'Holward', 26, 'Male'),
+--     ('Holly', 'Flax', NULL, NULL),
+--     ('Darryl', 'Philbin', NULL, 'Male');
 
 -- Select all records from EmployeeDemographics where Age is greater than or equal to 30
 SELECT *

@@ -1,3 +1,69 @@
+-- Create the database SQLTutorial
+CREATE DATABASE SQLTutorial;
+
+-- Switch to the newly created database
+USE SQLTutorial;
+
+
+-- Create the EmployeeDemographics table with EmployeelD as an identity column
+-- CREATE TABLE dbo.EmployeeDemographics (
+--     EmployeelD INT IDENTITY(1001, 1) PRIMARY KEY,
+--     FirstName VARCHAR(50),
+--     LastName VARCHAR(50),
+--     Age INT,
+--     Gender VARCHAR(10)
+-- );
+
+-- Insert data into the EmployeeDemographics table
+-- INSERT INTO dbo.EmployeeDemographics (FirstName, LastName, Age, Gender)
+-- VALUES
+--     ('Jim', 'Halpert', 30, 'Male'),
+--     ('Pam', 'Beasley', 30, 'Female'),
+--     ('Dwight', 'Schrute', 29, 'Male'),
+--     ('Angela', 'Martin', 31, 'Female'),
+--     ('Toby', 'Flenderson', 32, 'Male'),
+--     ('Michael', 'Scott', 35, 'Male'),
+--     ('Meredith', 'Palmer', 32, 'Female'),
+--     ('Stanley', 'Hudson', 38, 'Male'),
+--     ('Kevin', 'Malone', 31, 'Male'),
+--     ('Ryan', 'Holward', 26, 'Male'),
+--     ('Holly', 'Flax', NULL, NULL),
+--     ('Darryl', 'Philbin', NULL, 'Male');
+
+-- Create the EmployeeDemographics table
+CREATE TABLE dbo.EmployeeDemographics (
+    EmployeelD INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Age INT,
+    Gender VARCHAR(10)
+);
+
+
+-- Insert data into the EmployeeDemographics table
+INSERT INTO dbo.EmployeeDemographics (EmployeelD, FirstName, LastName, Age, Gender)
+VALUES
+    (1001, 'Jim', 'Halpert', 30, 'Male'),
+    (1002, 'Pam', 'Beasley', 30, 'Female'),
+    (1003, 'Dwight', 'Schrute', 29, 'Male'),
+    (1004, 'Angela', 'Martin', 31, 'Female'),
+    (1005, 'Toby', 'Flenderson', 32, 'Male'),
+    (1006, 'Michael', 'Scott', 35, 'Male'),
+    (1007, 'Meredith', 'Palmer', 32, 'Female'),
+    (1008, 'Stanley', 'Hudson', 38, 'Male'),
+    (1009, 'Kevin', 'Malone', 31, 'Male'),
+    (1011, 'Ryan', 'Holward', 26, 'Male');
+
+-- Insert data into the EmployeeDemographics table
+INSERT INTO SQLTutorial.dbo.EmployeeDemographics (FirstName, LastName)
+VALUES 
+    ('Holly', 'Flax');
+	
+-- Insert data into the EmployeeDemographics table
+INSERT INTO SQLTutorial.dbo.EmployeeDemographics (EmployeeID, FirstName, LastName, Gender)
+VALUES 
+    (1013, 'Darryl', 'Philbin', 'Male');
+
 -- Select all records from EmployeeDemographics where Age is greater than or equal to 30
 SELECT *
 FROM EmployeeDemographics

@@ -7,7 +7,7 @@ USE SQLTutorial;
 
 -- Create the EmployeeDemographics table
 CREATE TABLE dbo.EmployeeDemographics (
-    EmployeelD INT PRIMARY KEY,
+    EmployeeID INT,
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
     Age INT,
@@ -16,7 +16,7 @@ CREATE TABLE dbo.EmployeeDemographics (
 
 
 -- Insert data into the EmployeeDemographics table
-INSERT INTO dbo.EmployeeDemographics (EmployeelD, FirstName, LastName, Age, Gender)
+INSERT INTO dbo.EmployeeDemographics (EmployeeID, FirstName, LastName, Age, Gender)
 VALUES
     (1001, 'Jim', 'Halpert', 30, 'Male'),
     (1002, 'Pam', 'Beasley', 30, 'Female'),
@@ -39,9 +39,9 @@ INSERT INTO SQLTutorial.dbo.EmployeeDemographics (EmployeeID, FirstName, LastNam
 VALUES 
     (1013, 'Darryl', 'Philbin', 'Male');
 
--- Create the EmployeeDemographics table with EmployeelD as an identity column
+-- Create the EmployeeDemographics table with EmployeeID as an identity column
 -- CREATE TABLE dbo.EmployeeDemographics (
---     EmployeelD INT IDENTITY(1001, 1) PRIMARY KEY,
+--     EmployeeID INT IDENTITY(1001, 1) PRIMARY KEY,
 --     FirstName VARCHAR(50),
 --     LastName VARCHAR(50),
 --     Age INT,
